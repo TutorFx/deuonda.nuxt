@@ -63,7 +63,7 @@ export default {
       dark: true,
       themes: {
         dark: {
-          primary: '#273E68',
+          primary: '#1D4FAA',
           secondary: '#b0bec5',
           accent: '#FFCC00',
           error: '#b71c1c',

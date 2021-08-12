@@ -1,9 +1,10 @@
 <template>
   <v-app>
+    <loading />
     <div>
       <v-app-bar
         app
-        color="#273E68"
+        color="#1D4FAA"
         flat
         height="125px"
         elevate-on-scroll

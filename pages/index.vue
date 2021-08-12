@@ -12,18 +12,21 @@
                 dark
                 label="NOME:"
                 outlined
+                color="white"
                 border-color="#fff"
               ></v-text-field>
               <v-text-field
                 dark
                 label="E-MAIL:"
                 outlined
+                color="white"
                 border-color="#fff"
               ></v-text-field>
               <v-text-field
                 dark
                 label="TELEFONE:"
                 outlined
+                color="white"
                 border-color="#fff"
               ></v-text-field>
               <v-btn block x-large depressed class="primary--text" v-ripple="{ class: `white--text` }" color="accent"><B>ENVIAR</B></v-btn>
@@ -68,7 +71,7 @@
 </template>
 <style lang="scss">
   .home{
-    background-color: #273e68;
+    background-color: #1D4FAA;
     min-height: calc(100vh - 125px);
   }
   .arte{
