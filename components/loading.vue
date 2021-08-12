@@ -1,6 +1,6 @@
 <template>
 <div v-if="loading" class="loading-container">
-  <div id="loading" />
+  <div ref="loading" id="loading" />
 </div>
 </template>
 
@@ -9,17 +9,16 @@ import loading from "lottie-web";
 export default {
   mounted() {
     this.another = loading.loadAnimation({
-      container: document.getElementById("loading"), // the dom element that will contain the animation
+      container: this.$refs.loading, // the dom element that will contain the animation
       name: "loading",
       renderer: "svg",
       loop: true,
       autoplay: true,
       path: "/json/loading.json", // the path to the animation json
     });
-    setTimeout(() => {
-        //be executed after 1 second
+    this.another.addEventListener('loopComplete', (e) => {
         this.loading = false
-    }, 3000);
+    });
   },
   methods: {
   },
