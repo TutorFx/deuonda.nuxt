@@ -33,18 +33,18 @@
             </v-form>
             <v-row class="white--text">
               <v-col>
-                <div class="mb-3"><em>Siga o nosso instagram:</em></div>
-                <v-row align="center">
-                  <v-col cols="2"><v-img width="40px" height="40px" contain src="./logotipo-do-instagram.svg" /></v-col>
-                  <v-col><h2 style="font-weight: 300;">@deuondadigital</h2></v-col>
-                </v-row>
+                <div class="mb-3 text-center">Siga o nosso instagram:</div>
+                <div class="d-flex align-center">
+                  <v-img width="20px" height="20px" contain src="./logotipo-do-instagram.svg" />
+                  <h2 style="font-weight: 300;">@deuondadigital</h2>
+                </div>
               </v-col>
               <v-col>
-                <div class="mb-3"><em>Siga o nosso WhatsApp:</em></div>
-                <v-row align="center">
-                  <v-col cols="2"><v-img width="40px" height="40px" contain src="./logotipo-do-whatsapp.svg" /></v-col>
-                  <v-col><h2 style="font-weight: 300;">+55 62 993 519 901</h2></v-col>
-                </v-row>
+                <div class="mb-3 text-center"><em>Siga o nosso WhatsApp:</em></div>
+                <div class="d-flex align-center">
+                  <v-img width="20px" height="20px" contain src="./logotipo-do-whatsapp.svg" />
+                  <h2 style="font-weight: 300;">+55 62 993 519 901</h2>
+                </div>
               </v-col>
             </v-row>
           </v-col>

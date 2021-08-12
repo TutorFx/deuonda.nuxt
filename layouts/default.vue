@@ -30,20 +30,9 @@
           
           <v-col xs="12" lg="10" align-self="center" class="d-flex">
             <v-spacer></v-spacer>
-              <v-btn to="/" text>
+            <div>{{links}}</div>
+              <v-btn v-for="(l, key) in links" :key="key" to="/" text>
                 <b>Home</b>
-              </v-btn>
-              <v-btn to="/sobre" text>
-                <b>Quem Somos</b>
-              </v-btn>
-              <v-btn to="/portfolio" text>
-                <b>Portfólio</b>
-              </v-btn>
-              <v-btn to="/download" text>
-                <b>Download</b>
-              </v-btn>
-              <v-btn to="/contato" text>
-                <b>Contato</b>
               </v-btn>
             </v-col
           >
@@ -58,7 +47,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data(){
+    return{
+      
+    }
+  },
+  computed:{
+    links() { 
+      console.log(this.$store.state)
+      return this.$store.state.links }
+  }
+};
 </script>
 
 <style lang="scss">
