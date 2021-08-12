@@ -14,6 +14,7 @@
       >
         <v-container class="fill-height d-flex">
           <v-col xs="12" md="2" align-self="center">
+            <NuxtLink to="/">
             <v-img
               max-height="60px"
               max-width="160px"
@@ -23,7 +24,9 @@
                   ? '/logo.svg'
                   : '/logovert.svg'
               "
-          /></v-col>
+          />
+            </NuxtLink>
+          </v-col>
           
           <v-col xs="12" lg="10" align-self="center" class="d-flex">
             <v-spacer></v-spacer>
