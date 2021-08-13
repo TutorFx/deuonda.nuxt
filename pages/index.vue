@@ -7,11 +7,12 @@
           </v-col>
           <v-col cols="12" xs="12" sm="12" md="6" xl="4" class="">
             <h2 class="white--text text-center mb-5" >FAÇA PARTE DA ONDA!</h2>
-            <v-form class="mb-10">
+            <v-form class="mb-10" >
               <v-text-field
                 dark
                 label="NOME:"
                 outlined
+                name="name"
                 color="white"
                 border-color="#fff"
               ></v-text-field>
@@ -20,29 +21,31 @@
                 label="E-MAIL:"
                 outlined
                 color="white"
+                name="email"
                 border-color="#fff"
               ></v-text-field>
               <v-text-field
                 dark
                 label="TELEFONE:"
                 outlined
+                name="phone"
                 color="white"
                 border-color="#fff"
               ></v-text-field>
-              <v-btn block x-large depressed class="primary--text" v-ripple="{ class: `white--text` }" color="accent"><B>ENVIAR</B></v-btn>
+              <v-btn block x-large type="submit" depressed class="primary--text" v-ripple="{ class: `white--text` }" color="accent"><B>ENVIAR</B></v-btn>
             </v-form>
             <v-row class="white--text">
-              <v-col>
+              <v-col cols="12" sm="6" md="12" lg="6">
                 <div class="mb-3 text-center">Siga o nosso instagram:</div>
-                <div class="d-flex align-center">
-                  <v-img width="20px" height="20px" contain src="./logotipo-do-instagram.svg" />
+                <div class="d-flex align-center justify-center">
+                  <img width="20px" height="20px" class="mr-3" contain src="/logotipo-do-instagram.svg">
                   <h2 style="font-weight: 300;">@deuondadigital</h2>
                 </div>
               </v-col>
-              <v-col>
+              <v-col  cols="12" sm="6" md="12" lg="6">
                 <div class="mb-3 text-center"><em>Siga o nosso WhatsApp:</em></div>
-                <div class="d-flex align-center">
-                  <v-img width="20px" height="20px" contain src="./logotipo-do-whatsapp.svg" />
+                <div class="d-flex align-center justify-center">
+                  <img width="25px" height="25px" class="mr-3" contain src="/logotipo-do-whatsapp.svg">
                   <h2 style="font-weight: 300;">+55 62 993 519 901</h2>
                 </div>
               </v-col>

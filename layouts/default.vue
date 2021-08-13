@@ -2,40 +2,49 @@
   <v-app>
     <loading />
     <div>
+      <v-navigation-drawer app v-model="menu" color="primary" temporary>
+        <v-list dense nav>
+          <v-list-item :to="item[1]" :nuxt="true" v-for="item in links" :key="item.title" link>
+            <v-list-item-content >
+              <v-list-item-title>{{ item[0] }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
       <v-app-bar
         app
         color="#1D4FAA"
         flat
-        height="125px"
+        :height="$vuetify.breakpoint.mobile ? '75px' : '100px'"
         elevate-on-scroll
         :class="
           $vuetify.breakpoint.sm || $vuetify.breakpoint.xs ? '' : 'line-bottom'
         "
       >
-        <v-container class="fill-height d-flex">
-          <v-col xs="12" md="2" align-self="center">
-            <NuxtLink to="/">
-            <v-img
-              max-height="60px"
-              max-width="160px"
+        <v-container style="height: 100%" class="d-flex align-center">
+          <NuxtLink to="/" style="height: 100%">
+            <img
+              :style="`min-height: 100%; width: auto; max-width: ${
+                $vuetify.breakpoint.xs ? 70 : 100
+              }%`"
               contain
               :src="
                 $vuetify.breakpoint.sm || $vuetify.breakpoint.xs
                   ? '/logo.svg'
                   : '/logovert.svg'
               "
-          />
-            </NuxtLink>
-          </v-col>
-          
-          <v-col xs="12" lg="10" align-self="center" class="d-flex">
-            <v-spacer></v-spacer>
-            <div>{{links}}</div>
-              <v-btn v-for="(l, key) in links" :key="key" to="/" text>
-                <b>Home</b>
-              </v-btn>
-            </v-col
-          >
+            />
+          </NuxtLink>
+
+          <v-spacer />
+          <div v-if="!$vuetify.breakpoint.mobile" class="d-flex align-center">
+            <v-btn :to="i[1]" text v-for="(i, key) in links" :key="key">
+              {{ i[0] }}
+            </v-btn>
+          </div>
+          <v-btn v-if="$vuetify.breakpoint.mobile" @click="menu = !menu" text fab>
+            <v-icon>mdi-menu</v-icon>
+          </v-btn>
         </v-container>
       </v-app-bar>
 
@@ -45,18 +54,25 @@
     </div>
   </v-app>
 </template>
-
 <script>
 export default {
-  data(){
-    return{
-      
-    }
+  data() {
+    return {
+      links: [
+        ["Home", "/"],
+        ["Quem Somos", "/quem-somos"],
+        ["Portfolio", "/portfolio"],
+        ["Contato", "/contato"],
+      ],
+      menu: false
+    };
   },
-  computed:{
-    links() { 
-      console.log(this.$store.state)
-      return this.$store.state.links }
+  head() {
+    return {
+      script: [
+        { hid: 'hs-script-loader', src: '//js.hs-scripts.com/7236089.js', defer: true, async: true, }
+      ]
+    }
   }
 };
 </script>
