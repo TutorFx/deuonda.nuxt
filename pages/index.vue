@@ -7,12 +7,13 @@
           </v-col>
           <v-col cols="12" xs="12" sm="12" md="6" xl="4" class="">
             <h2 class="white--text text-center mb-5" >FAÇA PARTE DA ONDA!</h2>
-            <v-form class="mb-10" >
+            <v-form class="mb-10" action>
               <v-text-field
                 dark
                 label="NOME:"
                 outlined
                 name="name"
+                type="name"
                 color="white"
                 border-color="#fff"
               ></v-text-field>
@@ -20,6 +21,7 @@
                 dark
                 label="E-MAIL:"
                 outlined
+                type="email"
                 color="white"
                 name="email"
                 border-color="#fff"
@@ -29,6 +31,7 @@
                 label="TELEFONE:"
                 outlined
                 name="phone"
+                type="phone"
                 color="white"
                 border-color="#fff"
               ></v-text-field>
