@@ -2,7 +2,7 @@
   <v-app>
     <loading />
     <div>
-      <v-navigation-drawer app v-model="menu" color="primary" temporary>
+      <v-navigation-drawer app v-model="menu" color="white" temporary>
         <v-list dense nav>
           <v-list-item :to="item[1]" :nuxt="true" v-for="item in links" :key="item.title" link>
             <v-list-item-content >
@@ -38,11 +38,11 @@
 
           <v-spacer />
           <div v-if="!$vuetify.breakpoint.mobile" class="d-flex align-center">
-            <v-btn :to="i[1]" text v-for="(i, key) in links" :key="key">
+            <v-btn :to="i[1]" dark text v-for="(i, key) in links" :key="key">
               {{ i[0] }}
             </v-btn>
           </div>
-          <v-btn v-if="$vuetify.breakpoint.mobile" @click="menu = !menu" text fab>
+          <v-btn dark v-if="$vuetify.breakpoint.mobile" @click="menu = !menu" text fab>
             <v-icon>mdi-menu</v-icon>
           </v-btn>
         </v-container>
@@ -51,6 +51,10 @@
       <v-main>
         <Nuxt />
       </v-main>
+
+      <v-footer color="white" app>
+      <!-- -->
+      </v-footer>
     </div>
   </v-app>
 </template>
@@ -63,6 +67,7 @@ export default {
         ["Quem Somos", "/quem-somos"],
         ["Portfolio", "/portfolio"],
         ["Contato", "/contato"],
+        ["Gráfica", "/grafica"]
       ],
       menu: false
     };

@@ -1,15 +1,20 @@
 <template>
-  <v-app dark>
-    <h1 v-if="error.statusCode === 404">
-      {{ pageNotFound }}
-    </h1>
-    <h1 v-else>
-      {{ otherError }}
-    </h1>
-    <NuxtLink to="/">
-      Home page
-    </NuxtLink>
-  </v-app>
+
+    <v-main style="display:flex; align-items:center; height: 100%; width: 100%">
+      <div class="text-center">
+        <v-img src="./caldo/1.gif" class="mb-5" height="360px" width="100%" contain />
+        <h1 v-if="error.statusCode === 404">
+          {{ pageNotFound }}
+        </h1>
+        <h1 v-else>
+          {{ otherError }}
+        </h1>
+
+        <v-btn outlined class="mt-3" to="/">Voltar para a superfície</v-btn>
+
+      </div>
+    </v-main>
+
 </template>
 
 <script>
@@ -23,7 +28,7 @@ export default {
   },
   data () {
     return {
-      pageNotFound: '404 Not Found',
+      pageNotFound: '404 - Essa página tomou um caldo!',
       otherError: 'An error occurred'
     }
   },
